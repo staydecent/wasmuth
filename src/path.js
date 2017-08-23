@@ -1,10 +1,9 @@
 import check from 'check-arg-types'
 
+import partial from './partial'
+
 export default function path (paths, obj) {
-  if (arguments.length < 2) {
-    const args = [path].concat(Array.prototype.slice.call(arguments))
-    return path.bind.apply(path, args)
-  }
+  if (arguments.length < 2) return partial(path, arguments)
   check(arguments, ['array', 'object'])
   let val = obj
   for (let x = 0; x < paths.length; x++) {

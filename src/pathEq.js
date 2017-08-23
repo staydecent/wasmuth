@@ -1,9 +1,7 @@
 import path from './path'
+import partial from './partial'
 
 export default function pathEq (paths, val, obj) {
-  if (arguments.length < 3) {
-    const args = [pathEq].concat(Array.prototype.slice.call(arguments))
-    return pathEq.bind.apply(pathEq, args)
-  }
+  if (arguments.length < 3) return partial(pathEq, arguments)
   return path(paths, obj) === val
 }

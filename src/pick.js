@@ -1,5 +1,7 @@
 import check from 'check-arg-types'
 
+import partial from './partial'
+
 /**
  * Return a new object with only the specified keys included.
  * @param  {Array} keys
@@ -7,12 +9,7 @@ import check from 'check-arg-types'
  * @return {Object}
  */
 export default function pick (keys, obj) {
-  if (!keys && !obj) {
-    return undefined
-  }
-  if (keys && !obj) {
-    return pick.bind(pick, keys)
-  }
+  if (arguments.length < 2) return partial(pick, arguments)
   check(arguments, ['array', 'object'])
   const result = {}
   for (let x = 0; x < keys.length; x++) {

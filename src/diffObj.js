@@ -1,5 +1,8 @@
+import check from 'check-arg-types'
+
 // How is o2 different from o1
 export default function diffObj (o1 = {}, o2 = {}) {
+  check(arguments, ['object', 'object'])
   const out = {}
   const keys = Object.keys(o1)
   for (let x = 0; x < keys.length; x++) {

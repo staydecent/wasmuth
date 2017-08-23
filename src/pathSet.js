@@ -1,12 +1,10 @@
 import check from 'check-arg-types'
 
+import partial from './partial'
 import merge from './merge'
 
 export default function pathSet (paths, valToSet, object) {
-  if (arguments.length < 3) {
-    const args = [pathSet].concat(Array.prototype.slice.call(arguments))
-    return pathSet.bind.apply(pathSet, args)
-  }
+  if (arguments.length < 3) return partial(pathSet, arguments)
   check(arguments, ['array', '-any', 'object'])
   const copy = merge({}, object)
   paths.reduce(function (obj, prop, idx) {

@@ -1,5 +1,7 @@
 import check from 'check-arg-types'
 
+import partial from './partial'
+
 const toType = check.prototype.toType
 
 /**
@@ -9,12 +11,7 @@ const toType = check.prototype.toType
  * @return {Array}
  */
 export default function filter (fn, ls) {
-  if (!fn && !ls) {
-    return undefined
-  }
-  if (fn && !ls) {
-    return filter.bind(filter, fn)
-  }
+  if (arguments.length < 2) return partial(filter, arguments)
   check(arguments, ['function', ['array', 'object']])
   return toType(ls) === 'array'
     ? Array.prototype.filter.call(ls, fn)

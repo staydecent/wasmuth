@@ -1,5 +1,6 @@
 import filter from './filter'
 import pick from './pick'
+import partial from './partial'
 
 /**
  * Return a new object with only the specified keys included.
@@ -8,12 +9,7 @@ import pick from './pick'
  * @return {Object}
  */
 export default function without (keys, obj) {
-  if (!keys && !obj) {
-    return undefined
-  }
-  if (keys && !obj) {
-    return without.bind(without, keys)
-  }
+  if (arguments.length < 2) return partial(without, arguments)
   const keep = filter((k) => keys.indexOf(k) === -1, Object.keys(obj))
   return pick(keep, obj)
 }

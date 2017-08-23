@@ -1,10 +1,9 @@
 import check from 'check-arg-types'
 
+import partial from './partial'
+
 export default function assoc (key, val, obj) {
-  if (arguments.length < 3) {
-    const args = [assoc].concat(Array.prototype.slice.call(arguments))
-    return assoc.bind.apply(assoc, args)
-  }
+  if (arguments.length < 3) return partial(assoc, arguments)
   check(arguments, ['string', '-any', 'object'])
   const result = {}
   const keys = Object.keys(obj)

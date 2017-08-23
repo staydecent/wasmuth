@@ -1,5 +1,7 @@
 import check from 'check-arg-types'
 
+import partial from './partial'
+
 const toType = check.prototype.toType
 
 /**
@@ -9,12 +11,7 @@ const toType = check.prototype.toType
  * @return {Array}        The modified Array
  */
 export default function map (fn, ls) {
-  if (!fn && !ls) {
-    return undefined
-  }
-  if (fn && !ls) {
-    return map.bind(map, fn)
-  }
+  if (arguments.length < 2) return partial(map, arguments)
   check(arguments, ['function', ['array', 'object']])
   return toType(ls) === 'array'
     ? Array.prototype.map.call(ls, fn)

@@ -1,14 +1,11 @@
 import check from 'check-arg-types'
 
+import partial from './partial'
+
 const toType = check.prototype.toType
 
 export default function some (fn, ls) {
-  if (!fn && !ls) {
-    return undefined
-  }
-  if (fn && !ls) {
-    return some.bind(some, fn)
-  }
+  if (arguments.length < 2) return partial(some, arguments)
   check(arguments, ['function', ['array', 'object']])
   return toType(ls) === 'array'
     ? Array.prototype.some.call(ls, fn)
