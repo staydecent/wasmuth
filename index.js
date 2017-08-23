@@ -5,6 +5,7 @@ import last from 'src/last'
 import map from 'src/map'
 import merge from 'src/merge'
 import path from 'src/path'
+import pathEq from 'src/pathEq'
 import pathOr from 'src/pathOr'
 import pathSet from 'src/pathSet'
 import pick from 'src/pick'
@@ -24,6 +25,7 @@ const wasmuth = {
   map,
   merge,
   path,
+  pathEq,
   pathOr,
   pathSet,
   pick,
