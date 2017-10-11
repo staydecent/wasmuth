@@ -14,6 +14,7 @@ import range from './src/range'
 import reduce from './src/reduce'
 import some from './src/some'
 import toPairs from './src/toPairs'
+import fromPairs from './src/fromPairs'
 import uniq from './src/uniq'
 import where from './src/where'
 import without from './src/without'
@@ -35,6 +36,7 @@ const wasmuth = {
   reduce,
   some,
   toPairs,
+  fromPairs,
   uniq,
   where,
   without
