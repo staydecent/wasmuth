@@ -1,6 +1,8 @@
 import assoc from './src/assoc'
 import diffObj from './src/diffObj'
 import filter from './src/filter'
+import find from './src/find'
+import findIndex from './src/findIndex'
 import last from './src/last'
 import map from './src/map'
 import merge from './src/merge'
@@ -23,6 +25,8 @@ const wasmuth = {
   assoc,
   diffObj,
   filter,
+  find,
+  findIndex,
   last,
   map,
   merge,
