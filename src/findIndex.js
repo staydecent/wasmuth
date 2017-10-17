@@ -1,5 +1,5 @@
 import find from './find'
 
-export default function findIndex (list, predicate) {
-  return find(list, predicate, true)
+export default function findIndex (predicate, list) {
+  return find(predicate, list, true)
 }
