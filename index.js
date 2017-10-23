@@ -22,6 +22,7 @@ import request from './src/request'
 import some from './src/some'
 import toPairs from './src/toPairs'
 import uniq from './src/uniq'
+import watchStore from './src/watchStore'
 import where from './src/where'
 import without from './src/without'
 
@@ -50,6 +51,7 @@ const wasmuth = {
   some,
   toPairs,
   uniq,
+  watchStore,
   where,
   without
 }
