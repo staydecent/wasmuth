@@ -5,6 +5,7 @@ import filter from './src/filter'
 import find from './src/find'
 import findIndex from './src/findIndex'
 import fromPairs from './src/fromPairs'
+import guid from './src/guid'
 import last from './src/last'
 import map from './src/map'
 import merge from './src/merge'
@@ -32,6 +33,7 @@ const wasmuth = {
   find,
   findIndex,
   fromPairs,
+  guid,
   last,
   map,
   merge,
