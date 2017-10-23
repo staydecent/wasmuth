@@ -11,7 +11,7 @@ const cache = {}
 
 export default function watchStore (store, path, cb) {
   if (arguments.length < 3) return partial(watchStore, arguments)
-  check(arguments, ['string', '-any', 'object'])
+  check(arguments, ['object', 'array', 'function'])
 
   const {getState, subscribe} = store
   const key = path.join(',')
