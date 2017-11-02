@@ -18,6 +18,7 @@ import pick from './src/pick'
 import pipe from './src/pipe'
 import range from './src/range'
 import reduce from './src/reduce'
+import reject from './src/reject'
 import request from './src/request'
 import some from './src/some'
 import toPairs from './src/toPairs'
@@ -47,6 +48,7 @@ const wasmuth = {
   pipe,
   range,
   reduce,
+  reject,
   request,
   some,
   toPairs,
