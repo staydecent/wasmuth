@@ -1,3 +1,5 @@
+import equal from 'fast-deep-equal'
+
 import assoc from './src/assoc'
 import createAction from './src/createAction'
 import diffObj from './src/diffObj'
@@ -32,6 +34,7 @@ const wasmuth = {
   assoc,
   createAction,
   diffObj,
+  equal,
   filter,
   find,
   findIndex,
