@@ -20,6 +20,7 @@ import range from './src/range'
 import reduce from './src/reduce'
 import reject from './src/reject'
 import request from './src/request'
+import slice from './src/slice'
 import some from './src/some'
 import toPairs from './src/toPairs'
 import uniq from './src/uniq'
@@ -50,6 +51,7 @@ const wasmuth = {
   reduce,
   reject,
   request,
+  slice,
   some,
   toPairs,
   uniq,
