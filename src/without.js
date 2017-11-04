@@ -3,7 +3,7 @@ import pick from './pick'
 import partial from './partial'
 
 /**
- * Return a new object with only the specified keys included.
+ * Return a new object without any of the specified keys included.
  * @param  {Array} keys
  * @param  {Object} obj
  * @return {Object}
