@@ -14,9 +14,7 @@ export default function pick (keys, obj) {
   const result = {}
   for (let x = 0; x < keys.length; x++) {
     let k = keys[x]
-    if (obj[k]) {
-      result[k] = obj[k]
-    }
+    result[k] = obj[k]
   }
   return result
 }
