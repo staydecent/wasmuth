@@ -16,7 +16,10 @@ export default function request ({url, method = 'GET', data = null, headers}) {
     if (headers && toType(headers) === 'object') {
       map((k, v) => xhr.setRequestHeader(k, v), headers)
     }
-    xhr.send(toType(data) === 'object' ? JSON.stringify(data) : data)
+    const dataType = toType(data)
+    xhr.send(dataType === 'object' || dataType === 'array'
+      ? JSON.stringify(data)
+      : data)
   })
   return {xhr, promise}
 }
