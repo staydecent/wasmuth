@@ -8,6 +8,8 @@ import filter from './src/filter'
 import find from './src/find'
 import findIndex from './src/findIndex'
 import fromPairs from './src/fromPairs'
+import groupBy from './src/groupBy'
+import groupPropBy from './src/groupPropBy'
 import guid from './src/guid'
 import last from './src/last'
 import map from './src/map'
@@ -41,6 +43,8 @@ const wasmuth = {
   find,
   findIndex,
   fromPairs,
+  groupBy,
+  groupPropBy,
   guid,
   last,
   map,
