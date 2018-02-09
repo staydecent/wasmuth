@@ -5,7 +5,8 @@ import merge from './merge'
 
 export default function pathSet (paths, valToSet, object) {
   if (arguments.length < 3) return partial(pathSet, arguments)
-  check(arguments, ['array', '-any', 'object'])
+  check(arguments, [['array', 'string'], '-any', 'object'])
+  if (check.prototype.toType(paths) === 'string') paths = paths.split('.')
   const copy = merge({}, object)
   paths.reduce(function (obj, prop, idx) {
     obj[prop] = obj[prop] || {}
