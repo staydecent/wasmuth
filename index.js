@@ -2,6 +2,7 @@ import equal from 'fast-deep-equal'
 
 import assoc from './src/assoc'
 import createAction from './src/createAction'
+import deepClone from './src/deepClone'
 import diffObj from './src/diffObj'
 import dissoc from './src/dissoc'
 import filter from './src/filter'
@@ -38,6 +39,7 @@ import without from './src/without'
 const wasmuth = {
   assoc,
   createAction,
+  deepClone,
   diffObj,
   dissoc,
   equal,
