@@ -27,6 +27,7 @@ import reduce from './src/reduce'
 import reject from './src/reject'
 import request from './src/request'
 import slice from './src/slice'
+import slugify from './src/slugify'
 import some from './src/some'
 import toPairs from './src/toPairs'
 import uniq from './src/uniq'
@@ -63,6 +64,7 @@ const wasmuth = {
   reject,
   request,
   slice,
+  slugify,
   some,
   toPairs,
   uniq,
