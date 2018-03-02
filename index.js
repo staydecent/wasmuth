@@ -1,3 +1,4 @@
+import check from 'check-arg-types'
 import equal from 'fast-deep-equal'
 
 import assoc from './src/assoc'
@@ -36,6 +37,8 @@ import watchStore from './src/watchStore'
 import where from './src/where'
 import without from './src/without'
 
+const toType = check.prototype.toType
+
 const wasmuth = {
   assoc,
   createAction,
@@ -69,6 +72,7 @@ const wasmuth = {
   slugify,
   some,
   toPairs,
+  toType,
   uniq,
   watchStore,
   where,
