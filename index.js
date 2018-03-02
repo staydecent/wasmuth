@@ -27,6 +27,7 @@ import pipe from './src/pipe'
 import range from './src/range'
 import reduce from './src/reduce'
 import reject from './src/reject'
+import relativeTime from './src/relativeTime'
 import request from './src/request'
 import slice from './src/slice'
 import slugify from './src/slugify'
@@ -67,6 +68,7 @@ const wasmuth = {
   range,
   reduce,
   reject,
+  relativeTime,
   request,
   slice,
   slugify,
