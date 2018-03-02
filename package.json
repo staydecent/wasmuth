@@ -1,6 +1,6 @@
 {
   "name": "wasmuth",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "Practical, functional utilities that fallback on native implementations as much as possible",
   "main": "bundle.js",
   "scripts": {
