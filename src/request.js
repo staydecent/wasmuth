@@ -4,10 +4,19 @@ import map from './map'
 
 const toType = check.prototype.toType
 
+let XMLHttpRequest
+let async = true
+try {
+  XMLHttpRequest = window.XMLHttpRequest
+} catch (_) {
+  XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
+  async = false
+}
+
 export default function request ({url, method = 'GET', data = null, headers}) {
-  const xhr = new window.XMLHttpRequest()
+  const xhr = new XMLHttpRequest()
   const promise = new Promise((resolve, reject) => {
-    xhr.open(method, url)
+    xhr.open(method, url, async)
     xhr.onload = () => xhr.status >= 400
       ? reject(xhr.statusText)
       : resolve(safelyParse(xhr.responseText))
