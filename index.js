@@ -32,6 +32,7 @@ import request from './src/request'
 import slice from './src/slice'
 import slugify from './src/slugify'
 import some from './src/some'
+import sort from './src/sort'
 import toPairs from './src/toPairs'
 import uniq from './src/uniq'
 import watchStore from './src/watchStore'
@@ -73,6 +74,7 @@ const wasmuth = {
   slice,
   slugify,
   some,
+  sort,
   toPairs,
   toType,
   uniq,
