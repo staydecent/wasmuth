@@ -14,6 +14,7 @@ import fromPairs from './src/fromPairs'
 import groupBy from './src/groupBy'
 import groupPropBy from './src/groupPropBy'
 import guid from './src/guid'
+import includes from './src/includes'
 import isEmail from './src/isEmail'
 import join from './src/join'
 import last from './src/last'
@@ -58,6 +59,7 @@ const wasmuth = {
   groupBy,
   groupPropBy,
   guid,
+  includes,
   isEmail,
   join,
   last,
