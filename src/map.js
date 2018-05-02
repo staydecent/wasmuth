@@ -14,8 +14,19 @@ export default function map (fn, ls) {
   if (arguments.length < 2) return partial(map, arguments)
   check(arguments, ['function', ['array', 'object']])
   return toType(ls) === 'array'
-    ? Array.prototype.map.call(ls, fn)
+    ? fn.length === 1
+      ? arrMap(fn, ls)
+      : Array.prototype.map.call(ls, fn)
     : objMap(fn, ls)
+}
+
+function arrMap (fn, arr) {
+  const len = arr.length
+  const result = []
+  for (let x = 0; x < len; x++) {
+    result[x] = fn(arr[x])
+  }
+  return result
 }
 
 function objMap (fn, obj) {
