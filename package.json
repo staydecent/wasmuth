@@ -21,8 +21,7 @@
   "homepage": "https://github.com/staydecent/wasmuth#readme",
   "dependencies": {
     "check-arg-types": "1.1.0",
-    "fast-deep-equal": "^1.0.0",
-    "xmlhttprequest": "^1.8.0"
+    "fast-deep-equal": "1.0.0"
   },
   "devDependencies": {
     "ava": "^0.22.0",
@@ -38,6 +37,7 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "xmlhttprequest": "^1.8.0"
   }
 }
