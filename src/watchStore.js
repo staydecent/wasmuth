@@ -17,11 +17,13 @@ export default function watchStore (store, path, cb) {
   const key = path.join(',')
   const getPathVal = pathGet(path)
   const diff = () => {
+    const oldVal = cache[key]
     const newVal = getPathVal(getState())
-    if (newVal === undefined) {
+
+    if (newVal === undefined && oldVal === undefined) {
       return
     }
-    const oldVal = cache[key]
+
     if (oldVal === undefined || oldVal !== newVal) {
       if (toType(newVal) === 'object') {
         cache[key] = merge({}, newVal)
