@@ -4,7 +4,7 @@ import partial from './partial'
 
 export default function path (paths, obj) {
   if (arguments.length < 2) return partial(path, arguments)
-  check(arguments, [['array', 'string'], ['array', 'object']])
+  check(arguments, [['array', 'string'], ['array', 'object', 'window']])
   if (check.prototype.toType(paths) === 'string') paths = paths.split('.')
   let val = obj
   for (let x = 0; x < paths.length; x++) {
