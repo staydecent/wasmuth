@@ -11,7 +11,10 @@ export const safeWindow = (path, ...args) => {
   }
   const ref = pathGet(path, window)
   if (toType(ref) === 'function') {
-    return ref(...args)
+    return ref.call(
+      path.indexOf('localStorage') > -1 ? window.localStorage : window,
+      ...args
+    )
   } else {
     return ref
   }
