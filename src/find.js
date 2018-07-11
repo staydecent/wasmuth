@@ -1,18 +1,20 @@
-export default function find (predicate, list, returnIndex = false) {
-  if (typeof predicate !== 'function') {
-    throw new TypeError('predicate must be a function')
-  }
-  if (list == null) {
-    throw new TypeError('Array.prototype.find called on null or undefined')
-  }
-  const length = list.length || 0
+import check from 'check-arg-types'
+
+import partial from './partial'
+
+export default function find (predicate, ls, returnIndex = false) {
+  if (arguments.length < 2) return partial(find, arguments)
+  check(arguments, ['function', 'array', '-any'])
+
+  const length = ls.length
   let value
 
   for (let x = 0; x < length; x++) {
-    value = list[x]
-    if (predicate(value, x, list)) {
+    value = ls[x]
+    if (predicate(value, x, ls)) {
       return returnIndex ? x : value
     }
   }
+
   return undefined
 }
