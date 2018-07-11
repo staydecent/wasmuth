@@ -1,4 +1,7 @@
 # wasmuth
+
+[![Build Status](https://travis-ci.org/staydecent/wasmuth.svg?branch=master)](https://travis-ci.org/staydecent/wasmuth)
+
 Practical, functional utilities that fallback on native implementations as much as possible.
 
 Named after the Frank Lloyd Wright Wasmuth portfolio. I could argue how Wright's design philosophy aligns with that of this library, but I should let you know that I had a book of his work on my desk when I decided to make this repo...
