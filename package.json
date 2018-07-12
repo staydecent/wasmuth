@@ -2,10 +2,13 @@
   "name": "wasmuth",
   "version": "1.13.2",
   "description": "Practical, functional utilities that fallback on native implementations as much as possible",
-  "main": "bundle.js",
+  "main": "dist/wasmuth.js",
+  "module": "dist/wasmuth.m.js",
+  "source": "index.js",
   "scripts": {
-    "start": "rollup -c",
-    "pretest": "standard --verbose | snazzy",
+    "build": "microbundle",
+    "prepublishOnly": "npm run build",
+    "pretest": "npm run build && standard --verbose | snazzy",
     "test": "ava test"
   },
   "repository": {
@@ -19,6 +22,11 @@
     "url": "https://github.com/staydecent/wasmuth/issues"
   },
   "homepage": "https://github.com/staydecent/wasmuth#readme",
+  "standard": {
+    "ignore": [
+      "dist"
+    ]
+  },
   "dependencies": {
     "check-arg-types": "1.1.0",
     "fast-deep-equal": "1.0.0",
@@ -26,17 +34,7 @@
   },
   "devDependencies": {
     "ava": "^0.22.0",
-    "babel-core": "^6.26.0",
-    "babel-plugin-transform-es2015-spread": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "rollup": "^0.48.2",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-cleanup": "^1.0.1",
-    "rollup-plugin-commonjs": "^8.2.0",
-    "rollup-plugin-filesize": "^1.4.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^2.0.1",
+    "microbundle": "^0.5.1",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3"
   }
