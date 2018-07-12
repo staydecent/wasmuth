@@ -6,11 +6,11 @@ const toType = check.prototype.toType
 
 let XMLHttpRequest
 let async = true
-try {
-  XMLHttpRequest = window.XMLHttpRequest
-} catch (_) {
-  XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
-  async = false
+if (typeof window === 'undefined') {
+  (function () {
+    XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
+    async = false
+  })()
 }
 
 export default function request ({url, method = 'GET', data = null, headers}) {

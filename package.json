@@ -28,7 +28,9 @@
     ]
   },
   "dependencies": {
-    "check-arg-types": "1.1.2",
+    "check-arg-types": "1.1.2"
+  },
+  "peerDependencies": {
     "xmlhttprequest": "1.8.0"
   },
   "devDependencies": {
