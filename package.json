@@ -28,14 +28,14 @@
     ]
   },
   "dependencies": {
-    "check-arg-types": "1.1.0",
-    "fast-deep-equal": "1.0.0",
+    "check-arg-types": "1.1.2",
+    "fast-deep-equal": "2.0.1",
     "xmlhttprequest": "1.8.0"
   },
   "devDependencies": {
-    "ava": "^0.22.0",
+    "ava": "^0.25.0",
     "microbundle": "^0.5.1",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.3"
+    "standard": "^11.0.1"
   }
 }
