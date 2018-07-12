@@ -1,5 +1,4 @@
 import check from 'check-arg-types'
-import equal from 'fast-deep-equal'
 
 import chunk from './src/chunk'
 import deepClone from './src/deepClone'
@@ -49,7 +48,6 @@ const wasmuth = {
   deepClone,
   diffObj,
   dissoc,
-  equal,
   filter,
   find,
   findIndex,

@@ -1,6 +1,6 @@
 {
   "name": "wasmuth",
-  "version": "2.0.1",
+  "version": "1.13.2",
   "description": "Practical, functional utilities that fallback on native implementations as much as possible",
   "main": "dist/wasmuth.js",
   "module": "dist/wasmuth.m.js",
@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "check-arg-types": "1.1.2",
-    "fast-deep-equal": "2.0.1",
     "xmlhttprequest": "1.8.0"
   },
   "devDependencies": {
