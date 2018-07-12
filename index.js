@@ -44,6 +44,7 @@ const toType = check.prototype.toType
 
 const wasmuth = {
   assoc: pathSet,
+  check,
   chunk,
   deepClone,
   diffObj,
