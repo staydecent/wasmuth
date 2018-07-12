@@ -1,6 +1,6 @@
 {
   "name": "wasmuth",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Practical, functional utilities that fallback on native implementations as much as possible",
   "main": "dist/wasmuth.js",
   "module": "dist/wasmuth.m.js",
