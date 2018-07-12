@@ -59,3 +59,9 @@ typings/
 
 # Tern
 .tern-port
+
+# MacOS
+.DS_Store
+
+# Dist
+dist

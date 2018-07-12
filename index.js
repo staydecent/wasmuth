@@ -1,9 +1,7 @@
 import check from 'check-arg-types'
 import equal from 'fast-deep-equal'
 
-import assoc from './src/assoc'
 import chunk from './src/chunk'
-import createAction from './src/createAction'
 import deepClone from './src/deepClone'
 import diffObj from './src/diffObj'
 import dissoc from './src/dissoc'
@@ -39,16 +37,15 @@ import some from './src/some'
 import sort from './src/sort'
 import toPairs from './src/toPairs'
 import uniq from './src/uniq'
-import watchStore from './src/watchStore'
 import where from './src/where'
 import without from './src/without'
 
 const toType = check.prototype.toType
 
 const wasmuth = {
-  assoc,
+  assoc: pathSet,
+  check,
   chunk,
-  createAction,
   deepClone,
   diffObj,
   dissoc,
@@ -86,7 +83,6 @@ const wasmuth = {
   toPairs,
   toType,
   uniq,
-  watchStore,
   where,
   without
 }

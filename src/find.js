@@ -2,7 +2,7 @@ import check from 'check-arg-types'
 
 import partial from './partial'
 
-export default function find (predicate, ls, returnIndex = false) {
+export default function find (predicate, ls, returnIndex) {
   if (arguments.length < 2) return partial(find, arguments)
   check(arguments, ['function', 'array', '-any'])
 
