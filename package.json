@@ -30,9 +30,6 @@
   "dependencies": {
     "check-arg-types": "1.1.2"
   },
-  "optionalDependencies": {
-    "xmlhttprequest": "1.8.0"
-  },
   "devDependencies": {
     "ava": "^0.25.0",
     "microbundle": "^0.5.1",

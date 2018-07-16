@@ -28,7 +28,6 @@ import range from './src/range'
 import reduce from './src/reduce'
 import reject from './src/reject'
 import relativeTime from './src/relativeTime'
-import request from './src/request'
 import safeWindow from './src/safeWindow'
 import slice from './src/slice'
 import slugify from './src/slugify'
@@ -72,7 +71,6 @@ const wasmuth = {
   reduce,
   reject,
   relativeTime,
-  request,
   safeWindow,
   slice,
   slugify,
