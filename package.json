@@ -1,12 +1,13 @@
 {
   "name": "wasmuth",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Practical, functional utilities that fallback on native implementations as much as possible",
   "main": "dist/wasmuth.js",
   "module": "dist/wasmuth.m.js",
   "source": "index.js",
   "scripts": {
     "build": "microbundle",
+    "mono-version": "node version.js",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build && standard --verbose | snazzy",
     "test": "ava test"
@@ -15,7 +16,11 @@
     "type": "git",
     "url": "git+https://github.com/staydecent/wasmuth.git"
   },
-  "keywords": ["practical", "util", "functional"],
+  "keywords": [
+    "practical",
+    "util",
+    "functional"
+  ],
   "author": "Adrian Unger <npm@staydecent.ca> (http://staydecent.ca)",
   "license": "ISC",
   "bugs": {
