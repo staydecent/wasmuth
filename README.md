@@ -181,7 +181,7 @@ join('-', arr)
 
 Returns the result of calling `mapFn` on each element in the iterable `input`. Can be an Array or Object.
 
-```
+```javascript
 import map from '@wasmuth/map'
 const double = x => x * 2
 
@@ -202,7 +202,7 @@ map((val, prop) => prop === 'a' ? double(val) : val, {a: 1, b: 2})
 
 Return the value at the given path, for a given object or array.
 
-```
+```javascript
 import path from '@wasmuth/path'
 const obj = {a: {b: 2}}
 
@@ -223,7 +223,7 @@ path('a.b', obj)
 
 Check if the value at a given path, for a given object equals `val`.
 
-```
+```javascript
 import pathEq from '@wasmuth/path-eq'
 const obj = {a: {b: 2}}
 
@@ -244,7 +244,7 @@ pathEq('a.b', 4, obj)
 
 Return the value at the given path, for a given object or array, or `def` if falsy.
 
-```
+```javascript
 import pathOr from '@wasmuth/path-or'
 const obj = {a: {b: 2}}
 
@@ -265,7 +265,7 @@ pathOr(11, 'a.b', obj)
 
 Set the value no a given path for a given object.
 
-```
+```javascript
 import pathSet from '@wasmuth/path-set'
 const obj = {a: {b: 1}}
 
