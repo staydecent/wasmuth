@@ -15,8 +15,8 @@
     "type": "git",
     "url": "git+https://github.com/staydecent/wasmuth.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["practical", "util", "functional"],
+  "author": "Adrian Unger <npm@staydecent.ca> (http://staydecent.ca)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/staydecent/wasmuth/issues"
