@@ -1,7 +1,8 @@
-import test from 'ava'
+const test = require('tape')
 
-import {safeWindow} from '../'
+const {safeWindow} = require('../')
 
 test('safeWindow', (t) => {
   t.is(safeWindow('localStorage.setItem', 'myItem', 'value'), undefined)
+  t.end()
 })

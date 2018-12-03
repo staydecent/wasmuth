@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {isEmail} from '../'
+const {isEmail} = require('../')
 
 const fixture = [
   'sindresorhus@gmail.com',
@@ -46,10 +46,12 @@ test('exact', t => {
   for (const x of fixture) {
     t.true(isEmail(x))
   }
+  t.end()
 })
 
 test('failures', t => {
   for (const x of fixtureNot) {
     t.false(isEmail(x))
   }
+  t.end()
 })

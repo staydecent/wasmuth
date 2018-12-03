@@ -1,27 +1,37 @@
 {
   "name": "wasmuth",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Practical, functional utilities that fallback on native implementations as much as possible",
   "main": "dist/wasmuth.js",
   "module": "dist/wasmuth.m.js",
   "source": "index.js",
   "scripts": {
     "build": "microbundle",
+    "m-publish": "node publish.js",
+    "m-sync": "node sync.js",
+    "m-version": "node version.js",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build && standard --verbose | snazzy",
-    "test": "ava test"
+    "test": "tape test/*.js | tap-min"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/staydecent/wasmuth.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "practical",
+    "util",
+    "functional"
+  ],
+  "author": "Adrian Unger <npm@staydecent.ca> (http://staydecent.ca)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/staydecent/wasmuth/issues"
   },
   "homepage": "https://github.com/staydecent/wasmuth#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "standard": {
     "ignore": [
       "dist"
@@ -31,9 +41,10 @@
     "check-arg-types": "1.1.2"
   },
   "devDependencies": {
-    "ava": "0.25.0",
-    "microbundle": "0.7.0",
+    "microbundle": "0.8.1",
     "snazzy": "8.0.0",
-    "standard": "11.0.1"
+    "standard": "11.0.1",
+    "tap-min": "1.3.0",
+    "tape": "4.9.1"
   }
 }

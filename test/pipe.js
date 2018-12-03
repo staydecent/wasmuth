@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {pipe, map} from '../'
+const {map, pipe} = require('../')
 
 test('pipe', (t) => {
   t.deepEqual(
@@ -10,4 +10,5 @@ test('pipe', (t) => {
     )({a: 1, b: 2, c: 3}),
     [2, 3, 4]
   )
+  t.end()
 })

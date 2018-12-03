@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {findIndex} from '../'
+const {findIndex} = require('../')
 
 test('findIndex', (t) => {
   const arr = ['b', 'a', 'd', 'c']
@@ -16,4 +16,6 @@ test('findIndex', (t) => {
 
   // Throw
   t.throws(() => findIndex(v => v === 'x')({a: 1}), TypeError)
+
+  t.end()
 })

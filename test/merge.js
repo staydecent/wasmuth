@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {merge} from '../'
+const {merge} = require('../')
 
 test('merge', (t) => {
   const chain = {chain: 1}
@@ -11,4 +11,5 @@ test('merge', (t) => {
     merge(o1, o2),
     {a: 'a', b: 2, c: 'c', d: [{chain: 2}, {a: 1}]}
   )
+  t.end()
 })

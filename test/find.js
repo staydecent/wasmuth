@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {find} from '../'
+const {find} = require('../')
 
 test('find', (t) => {
   const arr = ['b', 'a', 'd', 'c']
@@ -16,4 +16,6 @@ test('find', (t) => {
 
   // Throw
   t.throws(() => find(v => v === 'x')({a: 1}), TypeError)
+
+  t.end()
 })

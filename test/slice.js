@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {slice} from '../'
+const {slice} = require('../')
 
 test('slice', (t) => {
   const arr = ['a', 'b', 'c', 'd']
@@ -27,4 +27,5 @@ test('slice', (t) => {
   )
   t.is(orig, 'ramda')
   t.deepEqual(arr, ['a', 'b', 'c', 'd'])
+  t.end()
 })

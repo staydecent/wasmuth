@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {includes} from '../'
+const {includes} = require('../')
 
 test('includes', (t) => {
   const arr = ['a', 'b', 'c', 'd']
@@ -20,4 +20,5 @@ test('includes', (t) => {
     includes('was')('wasmuth'),
     true
   )
+  t.end()
 })

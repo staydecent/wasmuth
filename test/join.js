@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {join} from '../'
+const {join} = require('../')
 
 test('join', (t) => {
   const arr = ['a', 'b', 'c', 'd']
@@ -20,4 +20,5 @@ test('join', (t) => {
     join(' ')(arr),
     'a b c d'
   )
+  t.end()
 })

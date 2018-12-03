@@ -1,12 +1,13 @@
-import test from 'ava'
+const test = require('tape')
 
-import {toPairs, fromPairs} from '../'
+const {toPairs, fromPairs} = require('../')
 
 test('toPairs', (t) => {
   const obj = {a: 1, b: 2, c: 3}
   const pairs = toPairs(obj)
   t.deepEqual(pairs.length, 3)
   t.deepEqual(pairs[1], ['b', 2])
+  t.end()
 })
 
 test('fromPairs', (t) => {
@@ -14,4 +15,5 @@ test('fromPairs', (t) => {
   const pairs = toPairs(obj)
   const out = fromPairs(pairs)
   t.deepEqual(out.b, 2)
+  t.end()
 })

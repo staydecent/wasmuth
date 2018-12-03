@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {pathSet} from '../'
+const {pathSet} = require('../')
 
 test('pathSet', (t) => {
   const obj = {a: {b: 1}}
@@ -8,4 +8,5 @@ test('pathSet', (t) => {
   t.deepEqual(pathSet('a.b', 3, obj), {a: {b: 3}})
   t.deepEqual(pathSet('0.a.b', 3, [obj]), [{a: {b: 3}}])
   t.deepEqual(obj, {a: {b: 1}})
+  t.end()
 })
