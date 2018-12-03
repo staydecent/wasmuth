@@ -7,8 +7,9 @@
   "source": "index.js",
   "scripts": {
     "build": "microbundle",
-    "m-version": "node version.js",
+    "m-publish": "node publish.js",
     "m-sync": "node sync.js",
+    "m-version": "node version.js",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build && standard --verbose | snazzy",
     "test": "tape test/*.js | tap-min"
