@@ -181,7 +181,7 @@ join('-', arr)
 
 Returns the result of calling `mapFn` on each element in the iterable `input`. Can be an Array or Object.
 
-```javascript
+```javascriptg
 import map from '@wasmuth/map'
 const double = x => x * 2
 
@@ -263,7 +263,7 @@ pathOr(11, 'a.b', obj)
 
 > pathSet(def: Any, path: String|Array, obj: Object): Any
 
-Set the value no a given path for a given object.
+Set the value on a given path for a given object.
 
 ```javascript
 import pathSet from '@wasmuth/path-set'
@@ -282,3 +282,70 @@ pathSet('0.a.b', 3, [obj])
 [Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/path-set/path-set.js)
 [Tests](https://github.com/staydecent/wasmuth/tree/master/test/path-set.js)
 
+---
+#### pick
+
+> pick(keys: Array, obj: Object): Object
+
+Return obj with only the keys specified.
+
+```javascript
+import pick from '@wasmuth/pick'
+
+pick(['a', 'c'], {a: 1, b: 2, c: 3})
+// => {a: 1, c: 3}
+```
+
+[Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/pick/pick.js)
+[Tests](https://github.com/staydecent/wasmuth/tree/master/test/pick.js)
+
+---
+#### pipe
+
+> pipe(fn1: Function, ..., fnN: Function): Function
+
+Perform left-to-right function composition. That is, the value of each function (starting on the left), is passed to the next function.
+
+```javascript
+import pipe from '@wasmuth/pipe'
+
+pipe(
+  Object.values,
+  map(n => n + 1)
+)({a: 1, b: 2, c: 3})
+// => [2, 3, 4]
+```
+
+[Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/pipe/pipe.js)
+[Tests](https://github.com/staydecent/wasmuth/tree/master/test/pipe.js)
+
+---
+#### range
+
+> range(from: Number, to: Number): Array
+
+Returns a list of numbers from `from` (inclusive) to `to` (exclusive).
+
+```javascript
+import range from '@wasmuth/range'
+range(0, 6)
+// => [0, 1, 2, 3, 4, 5]
+```
+
+[Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/range/range.js)
+[Tests](https://github.com/staydecent/wasmuth/tree/master/test/range.js)
+
+---
+#### to-pairs
+
+> toPairs(obj: Objectr): Array
+
+```javascript
+import toPairs from '@wasmuth/to-pairs'
+
+toPairs({a: 1, b: 2, c: 3})
+// => [['a', 1], ['b', 2], ['c', 3]]
+```
+
+[Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/to-pairs/to-pairs.js)
+[Tests](https://github.com/staydecent/wasmuth/tree/master/test/to-pairs.js)
