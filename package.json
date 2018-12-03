@@ -7,7 +7,8 @@
   "source": "index.js",
   "scripts": {
     "build": "microbundle",
-    "mono-version": "node version.js",
+    "m-version": "node version.js",
+    "m-sync": "node sync.js",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build && standard --verbose | snazzy",
     "test": "ava test"
@@ -27,6 +28,9 @@
     "url": "https://github.com/staydecent/wasmuth/issues"
   },
   "homepage": "https://github.com/staydecent/wasmuth#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "standard": {
     "ignore": [
       "dist"
