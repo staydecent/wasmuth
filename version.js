@@ -3,6 +3,7 @@
 const {resolve} = require('path')
 const {exec} = require('child_process')
 
+// $ npm run m-version chunk patch
 if (require.main === module) {
   if (process.argv.length < 3) {
     console.log('Not enough arguments supplied')

@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {sort} from '../'
+const {sort} = require('../')
 
 test('sort', (t) => {
   const arr = ['b', 'a', 'd', 'c']
@@ -39,4 +39,5 @@ test('sort', (t) => {
       {count: 1}
     ]
   )
+  t.end()
 })

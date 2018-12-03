@@ -1,6 +1,6 @@
-import test from 'ava'
+const test = require('tape')
 
-import {chunk} from '../'
+const {chunk} = require('../')
 
 test('chunk', (t) => {
   const arr = ['a', 'b', 'c', 'd']
@@ -16,4 +16,5 @@ test('chunk', (t) => {
     chunk(3)('wasmuth'),
     ['was', 'mut', 'h']
   )
+  t.end()
 })

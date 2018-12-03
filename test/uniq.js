@@ -1,8 +1,9 @@
-import test from 'ava'
+const test = require('tape')
 
-import {uniq} from '../'
+const {uniq} = require('../')
 
 test('uniq', (t) => {
   const ls = [1, 2, 3, 3]
   t.deepEqual(uniq(ls), [1, 2, 3])
+  t.end()
 })
