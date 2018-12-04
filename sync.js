@@ -23,7 +23,15 @@ readdir(resolve(DIR), (err, files) => {
     files.map(name => {
       const file = resolve(DIR, name, 'package.json')
       const pkg = require(file)
-      writeFile(file, JSON.stringify({...basePkg, ...pkg}, null, 2), (err) => {
+      const newPkg = {
+        ...basePkg,
+        ...pkg,
+        dependencies: {
+          ...pkg.dependencies,
+          ...basePkg.dependencies
+        }
+      }
+      writeFile(file, JSON.stringify(newPkg, null, 2), (err) => {
         if (err) throw err
         console.log('synced package.json for', name)
       })
