@@ -33,7 +33,7 @@ readdir(resolve(DIR), (err, files) => {
             ...basePkg.dependencies
           }
         }
-        writeFile(file, JSON.stringify(newPkg, null, 2), (err) => {
+        writeFile(file, JSON.stringify(newPkg, null, 2) + '\n', (err) => {
           if (err) throw err
           console.log('synced package.json for', name)
         })
