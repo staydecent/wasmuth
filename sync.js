@@ -20,21 +20,23 @@ readdir(resolve(DIR), (err, files) => {
     console.error(err.stack)
     process.exit(1)
   } else {
-    files.map(name => {
-      const file = resolve(DIR, name, 'package.json')
-      const pkg = require(file)
-      const newPkg = {
-        ...basePkg,
-        ...pkg,
-        dependencies: {
-          ...pkg.dependencies,
-          ...basePkg.dependencies
+    files
+      .filter(name => name[0] !== '.')
+      .map(name => {
+        const file = resolve(DIR, name, 'package.json')
+        const pkg = require(file)
+        const newPkg = {
+          ...basePkg,
+          ...pkg,
+          dependencies: {
+            ...pkg.dependencies,
+            ...basePkg.dependencies
+          }
         }
-      }
-      writeFile(file, JSON.stringify(newPkg, null, 2), (err) => {
-        if (err) throw err
-        console.log('synced package.json for', name)
+        writeFile(file, JSON.stringify(newPkg, null, 2), (err) => {
+          if (err) throw err
+          console.log('synced package.json for', name)
+        })
       })
-    })
   }
 })
