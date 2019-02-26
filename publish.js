@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const {resolve} = require('path')
-const {exec} = require('child_process')
+const { resolve } = require('path')
+const { exec } = require('child_process')
 
 // $ npm run m-publish chunk
 if (require.main === module) {
@@ -16,6 +16,6 @@ if (require.main === module) {
   process.chdir(dir)
 
   exec(`npm publish`, (err, stdout, stderr) => {
-    console.log(name, {err, stdout, stderr})
+    console.log(name, { err, stdout, stderr })
   })
 }

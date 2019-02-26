@@ -1,6 +1,6 @@
 const test = require('tape')
 
-const {isEmail} = require('../')
+const { isEmail } = require('../')
 
 const fixture = [
   'sindresorhus@gmail.com',

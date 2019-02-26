@@ -1,6 +1,6 @@
 const test = require('tape')
 
-const {join} = require('../')
+const { join } = require('../')
 
 test('join', (t) => {
   const arr = ['a', 'b', 'c', 'd']

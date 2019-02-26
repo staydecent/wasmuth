@@ -1,6 +1,6 @@
 const test = require('tape')
 
-const {find} = require('../')
+const { find } = require('../')
 
 test('find', (t) => {
   const arr = ['b', 'a', 'd', 'c']
@@ -15,7 +15,7 @@ test('find', (t) => {
   t.deepEqual(find(v => v === 'x')(arr), undefined)
 
   // Throw
-  t.throws(() => find(v => v === 'x')({a: 1}), TypeError)
+  t.throws(() => find(v => v === 'x')({ a: 1 }), TypeError)
 
   t.end()
 })

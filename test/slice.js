@@ -1,6 +1,6 @@
 const test = require('tape')
 
-const {slice} = require('../')
+const { slice } = require('../')
 
 test('slice', (t) => {
   const arr = ['a', 'b', 'c', 'd']

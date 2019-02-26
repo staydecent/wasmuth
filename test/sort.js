@@ -1,6 +1,6 @@
 const test = require('tape')
 
-const {sort} = require('../')
+const { sort } = require('../')
 
 test('sort', (t) => {
   const arr = ['b', 'a', 'd', 'c']
@@ -13,30 +13,30 @@ test('sort', (t) => {
     ['a', 'b', 'c', 'd']
   )
   const objs = [
-    {count: 3},
-    {count: 2},
-    {count: 9},
-    {count: 1}
+    { count: 3 },
+    { count: 2 },
+    { count: 9 },
+    { count: 1 }
   ]
   t.deepEqual(
     sort(
-      ({count: aCount}, {count: bCount}) => aCount > bCount,
+      ({ count: aCount }, { count: bCount }) => aCount - bCount,
       objs
     ),
     [
-      {count: 1},
-      {count: 2},
-      {count: 3},
-      {count: 9}
+      { count: 1 },
+      { count: 2 },
+      { count: 3 },
+      { count: 9 }
     ]
   )
   t.deepEqual(
-    sort(({count: aCount}, {count: bCount}) => aCount < bCount)(objs),
+    sort(({ count: aCount }, { count: bCount }) => bCount - aCount)(objs),
     [
-      {count: 9},
-      {count: 3},
-      {count: 2},
-      {count: 1}
+      { count: 9 },
+      { count: 3 },
+      { count: 2 },
+      { count: 1 }
     ]
   )
   t.end()

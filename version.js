@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const {resolve} = require('path')
-const {exec} = require('child_process')
+const { resolve } = require('path')
+const { exec } = require('child_process')
 
 // $ npm run m-version chunk patch
 if (require.main === module) {
@@ -18,7 +18,7 @@ if (require.main === module) {
 
   exec(`npm --no-git-tag-version version ${type}`, (err, stdout, stderr) => {
     if (err || stderr) {
-      console.error({err, stderr})
+      console.error({ err, stderr })
       return
     }
 
@@ -28,12 +28,12 @@ if (require.main === module) {
     const tag = `@wasmuth/${name}@${stdout.replace('v', '')}`
     exec(`git tag ${tag}`, (err, stdout, stderr) => {
       if (err || stderr) {
-        console.error({err, stderr})
+        console.error({ err, stderr })
       } else {
         console.log(stdout)
         exec('git push --tags', (err, stdout, stderr) => {
           if (err || stderr) {
-            console.error({err, stderr})
+            console.error({ err, stderr })
           } else {
             console.log(stdout)
           }

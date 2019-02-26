@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const {resolve} = require('path')
-const {readdir, writeFile} = require('fs')
+const { resolve } = require('path')
+const { readdir, writeFile } = require('fs')
 
 const DIR = 'packages/node_modules/@wasmuth'
 const topPkg = require(resolve('./package.json'))
