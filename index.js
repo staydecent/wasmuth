@@ -1,6 +1,7 @@
 import check from 'check-arg-types'
 
 import chunk from './packages/node_modules/@wasmuth/chunk'
+import compose from './packages/node_modules/@wasmuth/compose'
 import deepClone from './packages/node_modules/@wasmuth/deep-clone'
 import diffObj from './packages/node_modules/@wasmuth/diff-obj'
 import dissoc from './packages/node_modules/@wasmuth/dissoc'
@@ -44,6 +45,7 @@ const wasmuth = {
   assoc: pathSet,
   check,
   chunk,
+  compose,
   deepClone,
   diffObj,
   dissoc,
