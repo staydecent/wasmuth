@@ -29,6 +29,26 @@ chunk(2, ['a', 'b', 'c', 'd'])
 [Tests](https://github.com/staydecent/wasmuth/tree/master/test/chunk.js)
 
 ---
+#### compose
+
+> compose(fnN: Function, ..., fn1: Function): Function
+
+Perform right-to-left function composition. That is, the value of each function (starting on the right), is passed to the next function.
+
+```javascript
+import compose from '@wasmuth/compose'
+
+compose(
+  map(n => n + 1),
+  Object.values
+)({a: 1, b: 2, c: 3})
+// => [2, 3, 4]
+```
+
+[Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/compose/compose.js)
+[Tests](https://github.com/staydecent/wasmuth/tree/master/test/compose.js)
+
+---
 #### filter
 
 > filter(predicate: Function, input: Array|Object): Array|Object
@@ -173,6 +193,24 @@ join('-', arr)
 
 [Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/join/join.js)
 [Tests](https://github.com/staydecent/wasmuth/tree/master/test/join.js)
+
+---
+#### last
+
+> join(arr: Array): Any
+
+Return the last element of the given array.
+
+```javascript
+import last from '@wasmuth/last'
+const arr = ['a', 'b', 'c', 'd']
+
+last(arr)
+// => 'd'
+```
+
+[Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/last/last.js)
+[Tests](https://github.com/staydecent/wasmuth/tree/master/test/last.js)
 
 ---
 #### map
@@ -334,6 +372,30 @@ range(0, 6)
 
 [Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/range/range.js)
 [Tests](https://github.com/staydecent/wasmuth/tree/master/test/range.js)
+
+---
+#### reduce
+
+> reduce(fn: Function, initVal: Any, arr: Array): Any
+
+Curryable wrapper around native `Array.prototype.reduce`.
+
+```javascript
+import reduce from '@wasmuth/reduce'
+const arr = [1, 2, 3, 4]
+
+reduce((acc, elm) => acc + elm, 0, arr)
+// => 10
+
+reduce((acc, elm) => acc + elm, 0)(arr)
+// => 10
+
+reduce((acc, elm) => acc + elm)(0)(arr)
+// => 10
+```
+
+[Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/reduce/reduce.js)
+[Tests](https://github.com/staydecent/wasmuth/tree/master/test/reduce.js)
 
 ---
 #### to-pairs
