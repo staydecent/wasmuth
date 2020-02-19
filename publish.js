@@ -15,7 +15,7 @@ if (require.main === module) {
 
   process.chdir(dir)
 
-  exec(`npm publish`, (err, stdout, stderr) => {
+  exec('npm publish', (err, stdout, stderr) => {
     console.log(name, { err, stdout, stderr })
   })
 }
