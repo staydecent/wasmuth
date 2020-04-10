@@ -221,12 +221,13 @@ Returns the result of calling `mapFn` on each element in the iterable `input`. C
 
 ```javascriptg
 import map from '@wasmuth/map'
+
 const double = x => x * 2
 
 map(double, [1, 2, 3])
 // => [2, 4, 6]
 
-map((val, prop) => prop === 'a' ? double(val) : val, {a: 1, b: 2})
+map((key, val) => key === 'a' ? double(val) : val, {a: 1, b: 2})
 // => {a: 2, b: 2}
 ```
 
