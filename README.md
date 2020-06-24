@@ -298,6 +298,24 @@ pathOr(11, 'a.b', obj)
 [Tests](https://github.com/staydecent/wasmuth/tree/master/test/path-or.js)
 
 ---
+#### path-remove
+
+> pathRemove(path: String|Array, obj: Object): Any
+
+Remove the value at the given path, for a given object or array.
+
+```javascript
+import pathRemove from '@wasmuth/path-remove'
+const obj = {a: {b: 2, c: 3}}
+
+pathRemove(['a', 'b'], obj)
+// => {a: {c: 3}}
+```
+
+[Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/path-remove/path-remove.js)
+[Tests](https://github.com/staydecent/wasmuth/tree/master/test/path-remove.js)
+
+---
 #### path-set
 
 > pathSet(def: Any, path: String|Array, obj: Object): Any
