@@ -300,7 +300,7 @@ pathOr(11, 'a.b', obj)
 ---
 #### path-set
 
-> pathSet(def: Any, path: String|Array, obj: Object): Any
+> pathSet(path: String|Array, def: Any, obj: Object): Any
 
 Set the value on a given path for a given object.
 
