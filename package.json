@@ -1,6 +1,6 @@
 {
   "name": "wasmuth",
-  "version": "2.0.7",
+  "version": "2.1.0",
   "description": "Practical, functional utilities that fallback on native implementations as much as possible",
   "main": "dist/wasmuth.js",
   "module": "dist/wasmuth.m.js",
@@ -33,7 +33,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "prettier" :{
+  "prettier": {
     "bracketSpacing": false
   },
   "dependencies": {
