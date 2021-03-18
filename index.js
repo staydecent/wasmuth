@@ -22,7 +22,9 @@ import partial from './packages/node_modules/@wasmuth/partial'
 import path from './packages/node_modules/@wasmuth/path'
 import pathEq from './packages/node_modules/@wasmuth/path-eq'
 import pathOr from './packages/node_modules/@wasmuth/path-or'
+import pathRemove from './packages/node_modules/@wasmuth/path-remove'
 import pathSet from './packages/node_modules/@wasmuth/path-set'
+import pathUpdate from './packages/node_modules/@wasmuth/path-update'
 import pick from './packages/node_modules/@wasmuth/pick'
 import pipe from './packages/node_modules/@wasmuth/pipe'
 import range from './packages/node_modules/@wasmuth/range'
@@ -66,7 +68,9 @@ const wasmuth = {
   path,
   pathEq,
   pathOr,
+  pathRemove,
   pathSet,
+  pathUpdate,
   pick,
   pipe,
   range,

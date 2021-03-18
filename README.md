@@ -298,6 +298,24 @@ pathOr(11, 'a.b', obj)
 [Tests](https://github.com/staydecent/wasmuth/tree/master/test/path-or.js)
 
 ---
+#### path-remove
+
+> pathRemove(path: String|Array, obj: Object): Any
+
+Remove the value at the given path, for a given object or array.
+
+```javascript
+import pathRemove from '@wasmuth/path-remove'
+const obj = {a: {b: 2, c: 3}}
+
+pathRemove(['a', 'b'], obj)
+// => {a: {b: null, c: 3}}
+```
+
+[Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/path-remove/path-remove.js)
+[Tests](https://github.com/staydecent/wasmuth/tree/master/test/path-remove.js)
+
+---
 #### path-set
 
 > pathSet(path: String|Array, def: Any, obj: Object): Any
@@ -320,6 +338,36 @@ pathSet('0.a.b', 3, [obj])
 
 [Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/path-set/path-set.js)
 [Tests](https://github.com/staydecent/wasmuth/tree/master/test/path-set.js)
+
+---
+#### path-update
+
+> pathUpdate(path: String|Array, value: any, obj: Object): Any
+
+Update the value on a given path for a given object.
+
+If the existing path target and the new value are both arrays, concat the value.
+If the existing path target and the new value are both objects, merge the value.
+
+```javascript
+import pathUpdate from '@wasmuth/path-update'
+const obj = {a: {b: 1, c: [10, 20]}}
+
+pathUpdate('a', {d: 2}, obj)
+// => {a: {b: 1, c: [10, 20], d: 2}}
+
+pathUpdate('a.b', 3, obj)
+// => {a: {b: 3, c: [10, 20]}}
+
+pathUpdate('a.c', 30, obj)
+// => {a: {b: 1, c: 30}}
+
+pathUpdate('a.c', [30], obj)
+// => {a: {b: 1, c: [10, 20, 30]}}
+```
+
+[Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/path-update/path-update.js)
+[Tests](https://github.com/staydecent/wasmuth/tree/master/test/path-update.js)
 
 ---
 #### pick
