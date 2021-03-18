@@ -1,24 +1,12 @@
-const test = require('tape')
+const test = require("tape");
 
-const { join } = require('../')
+const {join} = require("../");
 
-test('join', (t) => {
-  const arr = ['a', 'b', 'c', 'd']
-  t.deepEqual(
-    join(arr),
-    'a,b,c,d'
-  )
-  t.deepEqual(
-    join()(arr),
-    'a,b,c,d'
-  )
-  t.deepEqual(
-    join('-', arr),
-    'a-b-c-d'
-  )
-  t.deepEqual(
-    join(' ')(arr),
-    'a b c d'
-  )
-  t.end()
-})
+test("join", (t) => {
+  const arr = ["a", "b", "c", "d"];
+  t.deepEqual(join(arr), "a,b,c,d");
+  t.deepEqual(join()(arr), "a,b,c,d");
+  t.deepEqual(join("-", arr), "a-b-c-d");
+  t.deepEqual(join(" ")(arr), "a b c d");
+  t.end();
+});

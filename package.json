@@ -6,12 +6,13 @@
   "module": "dist/wasmuth.m.js",
   "source": "index.js",
   "scripts": {
+    "prebuild": "prettier --write packages/node_modules/@wasmuth/ scripts/ test/ --with-node-modules",
     "build": "microbundle",
-    "m-publish": "node publish.js",
-    "m-sync": "node sync.js",
-    "m-version": "node version.js",
+    "m-publish": "node scripts/publish.js",
+    "m-sync": "node scripts/sync.js",
+    "m-version": "node scripts/version.js",
     "prepublishOnly": "npm run build",
-    "pretest": "npm run build && standard --verbose | snazzy",
+    "pretest": "npm run build",
     "test": "tape test/*.js | tap-min"
   },
   "repository": {
@@ -32,19 +33,16 @@
   "publishConfig": {
     "access": "public"
   },
-  "standard": {
-    "ignore": [
-      "dist"
-    ]
+  "prettier" :{
+    "bracketSpacing": false
   },
   "dependencies": {
     "check-arg-types": "1.1.2"
   },
   "devDependencies": {
-    "microbundle": "0.11.0",
-    "snazzy": "8.0.0",
-    "standard": "14.3.1",
+    "microbundle": "0.13.0",
+    "prettier": "^2.2.1",
     "tap-min": "2.0.0",
-    "tape": "4.13.0"
+    "tape": "5.2.2"
   }
 }
