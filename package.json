@@ -4,9 +4,9 @@
   "description": "Practical, functional utilities that fallback on native implementations as much as possible",
   "main": "dist/wasmuth.js",
   "module": "dist/wasmuth.m.js",
-  "source": "index.js",
+  "source": "src/index.js",
   "scripts": {
-    "prebuild": "prettier --write packages/node_modules/@wasmuth/ scripts/ test/ --with-node-modules",
+    "prebuild": "prettier --write packages/node_modules/@wasmuth/ scripts/ test/ src/ --with-node-modules",
     "build": "microbundle",
     "m-publish": "node scripts/publish.js",
     "m-sync": "node scripts/sync.js",
