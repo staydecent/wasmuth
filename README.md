@@ -309,7 +309,7 @@ import pathRemove from '@wasmuth/path-remove'
 const obj = {a: {b: 2, c: 3}}
 
 pathRemove(['a', 'b'], obj)
-// => {a: {b: null, c: 3}}
+// => {a: {c: 3}}
 ```
 
 [Source](https://github.com/staydecent/wasmuth/tree/master/packages/node_modules/@wasmuth/path-remove/path-remove.js)
